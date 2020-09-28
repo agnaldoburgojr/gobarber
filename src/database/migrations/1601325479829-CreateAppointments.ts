@@ -1,4 +1,4 @@
-import { MigrationInterface, QueryRunner, Table, Column } from "typeorm";
+import { MigrationInterface, QueryRunner, Table } from "typeorm";
 
 export default class CreateAppointments1601325479829
   implements MigrationInterface {
@@ -17,12 +17,20 @@ export default class CreateAppointments1601325479829
           {
             name: "provider",
             type: "varchar",
-            isNullable: false,
           },
           {
             name: "date",
             type: "timestamp with time zone",
-            isNullable: false,
+          },
+          {
+            name: "created_at",
+            type: "timestamp",
+            default: "now()",
+          },
+          {
+            name: "updated_at",
+            type: "timestamp",
+            default: "now()",
           },
         ],
       })
