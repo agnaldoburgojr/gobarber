@@ -2,6 +2,7 @@ import { sign } from "jsonwebtoken";
 import { getRepository } from "typeorm";
 import { compare } from "bcryptjs";
 import User from "../models/User";
+import authConfig from "../config/auth";
 
 interface Request {
   email: string;
@@ -27,10 +28,12 @@ class AuthenticateUserService {
     if (!passwordMatched) {
       throw new Error("Incorrect email/password combination.");
     }
-    //goStack_gobarber_2020
-    const token = sign({}, "ae8ae16cecae1ab560fa1148ebee8e8f", {
+
+    const { secret, expiresIn } = authConfig.jwt;
+
+    const token = sign({}, secret, {
       subject: user.id,
-      expiresIn: "1d",
+      expiresIn,
     });
 
     return { user, token };
