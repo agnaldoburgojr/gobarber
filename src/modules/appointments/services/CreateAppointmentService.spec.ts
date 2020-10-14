@@ -1,6 +1,7 @@
 import FakeAppointmentsRepository from '../repositories/fakes/FakeAppointmentsRepository';
 
 import CreateAppointmentService from './CreateAppointmentService';
+import AppError from '@shared/errors/AppError';
 
 describe('CreateAppointment', () => {
   it('should be able to create a new appointment', async () => {
@@ -25,18 +26,18 @@ describe('CreateAppointment', () => {
       fakeAppointmentsRepository,
     );
 
-    const appointmentDate = new Date();
+    const date = new Date(2020, 9, 14, 11);
 
     await createAppointment.execute({
-      date: new Date(),
+      date,
       provider_id: '123123123',
     });
 
     expect(
       createAppointment.execute({
-        date: new Date(),
-        provider_id: '123123123',
+        date,
+        provider_id: '123123124',
       }),
-    ).rejects.toBeInstanceOf(Error);
+    ).rejects.toBeInstanceOf(AppError);
   });
 });
