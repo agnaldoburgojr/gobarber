@@ -1,69 +1,76 @@
-# Recuperação de senha
+<div align="center" >
+  <img alt="NodeJS Logo" src="./github/nodejs.png" width='240px'>
+</div>
+<h1 align="center" >
+    GoBarber API
+</h1>
 
-**RF**
+<h4 align="center">
+  Backend da aplicação GoBarber, um gerenciador de atendimentos para barbearias, desenvolvido com Typescript, Express e NodeJS.
+</h4>
 
-- O usuário deve poder recuperar sua senha informando o seu e-mail;
-- O usuário deve receber um e-mail com instruções de recuperação de senha;
-- O usuário deve poder resetar sua senha;
+<p align="center">
+  <a href="#large_blue_diamond-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#large_blue_diamond-features">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#large_blue_diamond-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#large_blue_diamond-como-utilizar">Como instalar</a>
+</p>
+<br/>
 
-**RNF**
+## :large_blue_diamond: Sobre
 
-- Utilizar Mailtrap para testar envios em ambiente de desenvolvimento;
-- Utilizar Amazon SES para envios em produção;
-- O envio de e-mails deve acontecer em segundo plano (background job);
+Este é o backend da aplicação GoBarber. Este projeto foi desenvolvido durante o curso GoStack da Rocketseat onde foi desenvolvido a aplicação backend, frontend e mobile.
 
-**RN**
+Esta é uma aplicação para gerenciamento de atendimentos de uma barbearia. O foco de estudo deste projeto foi: desenvolvimento de uma API robusta e escalável; utilização de vários conceitos de DDD (Domain Driven Design); utilização de design patterns; aplicação do SOLID; TDD para os casos de uso, cobrindo 100% do projeto com testes unitários; estudo de arquitetura de software; Postgres e MongoDB; ORM com o typeORM e envio de email.
+<br/>
+<br/>
 
-- O link enviado por email para resetar senha, deve expirar em 2h;
-- O usuário precisa confirmar a nova senha ao resetar sua senha;
+## :large_blue_diamond: Features
 
-# Atualização do perfil
+Esta API contém as regras de negócio da aplicação GoBarber e fornece os dados consumidos nos clientes web e mobile. Abaixo, segue a lista de features do projeto
 
-**RF**
+- Gerenciamento de usuários: criação, atualização;
+- Recuperação de senha de usuário;
+- Autenticação com JWT;
+- Atualização de perfil e avatar;
+- Listagem de prestadores de serviços;
+- Listagem de agendamentos por prestador de serviços;
+- Gerenciamento de agendamentos: listagem e criação de agendamentos
+  <br/>
+  <br/>
 
-- O usuário deve poder atualizar seu nome, e-mail e senha;
+## :large_blue_diamond: Tecnologias
 
-**RN**
+As principais tecnologias envolvidas no projeto são:
 
-- O usuário não pode alterar seu email para um email já utilizado;
-- Para atualizar sua senha, o usuário deve informar a senha antiga;
-- Para atualizar sua senha, o usuário precisa confirmar a nova senha;
+- [NodeJS](https://nodejs.org/en/)
+- [Express](https://expressjs.com/pt-br/)
+- [TypeORM](https://typeorm.io/#/)
+- [Postgres](https://www.postgresql.org/)
+- [MongoDB](https://www.mongodb.com/)
+- [Redis](https://redislabs.com/)
+- [Docker](https://www.docker.com/)
+- [Date-fns](https://date-fns.org/docs/Getting-Started)
+- [Jest](https://jestjs.io/)
+- [Nodemailer](https://nodemailer.com/about/)
+- [Multer](https://www.npmjs.com/package/multer)
+- [Json Web Token](https://jwt.io/)
+- [Tsyring](https://www.npmjs.com/package/tsyringe)
+  <br/>
+  <br/>
 
-# Painel do administrador
+## :large_blue_diamond: Como utilizar
 
-**RF**
+Em breve atualizações de como utilizar. Será adicionado o ambiente utilizando o docker para facilitar rodar a aplicação
 
-- O usuário deve poder listar seus agendamentos de um dia específico;
-- O prestador deve receber uma notificação sempre que houver um novo agendamento;
-- O prestador deve poder visualizar as notificações não lidas;
+<br/>
 
-**RNF**
+## :large_blue_diamond: Licença
 
-- Os agendamentos do prestador no dia devem ser armazenados em cache;
-- As notificações do prestador devem ser armazenados no MongoDB;
-- As notificações do prestador devem ser enviados em tempo-real utilizando Socket.io;
+Este projeto possui Licença MIT. Olhe [LICENSE](https://github.com/agnaldoburgojr/imc-app/blob/master/LICENCE) para mais informações.
 
-**RN**
+<br/>
 
-- A notificação deve ter um status de lida ou não-lida para que o prestador possa controlar;
+---
 
-# Agendamento de serviços
-
-**RF**
-
-- O usuário deve poder listar todos prestadores de serviço cadastrados;
-- O usuário deve poder listar os dias de um mês com pelo menos um horário disponível de um prestador;
-- O usuário deve poder listar horários disponíveis em um dia específico de um prestador;
-- O usuário deve poder realizar um novo agendamento com um prestador;
-
-**RNF**
-
-- A listagem de prestadores deve ser armazenada em cache;
-
-**RN**
-
-- Cada agendamento deve durar 1h exatamente;
-- Os agendamentos devem estar disponíveis entre 8h às 18h (Primeiro às 8h, último às 17h);
-- O usuário não pode agendar em um horário já ocupado;
-- O usuário não pode agendar em um horário que já passou;
-- O usuário não pode agendar serviços consigo mesmo;
+Feito com ♥ por Agnaldo Burgo Junior :wave: [Get in touch!](https://www.linkedin.com/in/agnaldo-burgo-junior/)
