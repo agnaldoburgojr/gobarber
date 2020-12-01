@@ -8,7 +8,9 @@
 <h4 align="center">
   Backend da aplicação GoBarber, um gerenciador de atendimentos para barbearias, desenvolvido com Typescript, Express e NodeJS.
 </h4>
-
+<div align="center" >
+  <a href="https://insomnia.rest/run/?label=GoBarber&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fagnaldoburgojr%2Fgobarber-api%2Fmaster%2Fgithub%2Fexport.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
+</div>
 <p align="center">
   <a href="#large_blue_diamond-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#large_blue_diamond-features">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -21,7 +23,7 @@
 
 Este é o backend da aplicação GoBarber. Este projeto foi desenvolvido durante o curso GoStack da Rocketseat onde foi desenvolvido a aplicação backend, frontend e mobile.
 
-Esta é uma aplicação para gerenciamento de atendimentos de uma barbearia. O foco de estudo deste projeto foi: desenvolvimento de uma API robusta e escalável; utilização de vários conceitos de DDD (Domain Driven Design); utilização de design patterns; aplicação do SOLID; TDD para os casos de uso, cobrindo 100% do projeto com testes unitários; estudo de arquitetura de software; Postgres e MongoDB; ORM com o typeORM e envio de email.
+Esta é uma aplicação para gerenciamento de atendimentos de uma barbearia. O foco de estudo deste projeto foi: desenvolvimento de uma API robusta e escalável; utilização de vários conceitos de DDD (Domain Driven Design); utilização de design patterns; aplicação do SOLID; TDD para os casos de uso, cobrindo 100% do projeto com testes unitários; estudo de arquitetura de software; Postgres e MongoDB; ORM com o typeORM, envio de email e tratamento de erros.
 <br/>
 <br/>
 
@@ -38,6 +40,10 @@ Esta API contém as regras de negócio da aplicação GoBarber e fornece os dado
 - Gerenciamento de agendamentos: listagem e criação de agendamentos
   <br/>
   <br/>
+
+Para verificar os endpoints da API intale o [Insomnia](https://insomnia.rest/) e clique no botão abaixo:
+
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=GoBarber&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fagnaldoburgojr%2Fgobarber-api%2Fmaster%2Fgithub%2Fexport.json)
 
 ## :large_blue_diamond: Tecnologias
 
